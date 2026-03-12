@@ -1,0 +1,270 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background: #031017;
+    background: linear-gradient(
+        135deg,
+        #0f2027,
+        #203a43,
+        #2c5364
+     );
+    background-attachment: fixed;
+    display: grid;
+    place-items: center;
+}
+
+.line{
+  width: 90%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, white, transparent);
+  margin-top: 1rem;
+}
+
+
+.section-1{
+    width: clamp(28rem, 80%, 60rem);
+    min-height: 65rem;
+    backdrop-filter: blur(10px);
+   background: linear-gradient(
+        135deg,
+        #141e30,
+        #243b55
+        );
+
+    box-shadow:0 0 25px rgba(0,0,0,0.5);
+    border-radius: 16px;
+    padding-top: 3rem;
+    display: flex;
+    align-items: center; /*y main axis pr kaam krne lgega */
+    flex-direction: column;
+}
+
+.quote{
+    color: white;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.image{
+    width: clamp(10rem, 20vw, 15rem);
+    height: clamp(10rem, 20vw, 15rem);
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: blue;
+}
+
+.image:hover{
+    transform:scale(1.1);
+
+}
+
+/* information */
+
+.info{
+    height: inherit;
+    width: inherit;
+    color: white;
+    margin-top: 1rem;
+    text-align: center;
+    line-height: 1.6;
+}
+
+
+/* skills meter */
+.skill{
+    width:80%;
+    margin:1.5rem 0;
+}
+
+.skill-name{
+    margin-left: 1rem;
+    color:white;
+    margin-bottom:5px;
+}
+
+.bar{
+    margin-left: 1rem;
+    width:100%;
+    height:10px;
+    /* background:#333; */
+    border-radius:10px;
+    position:relative;
+}
+
+.progress{
+    height:100%;
+    background:#00ffcc;
+    border-radius:10px;
+    position:relative;
+}
+
+.progress span{
+    position:absolute;
+    right:-20px;
+    top:-25px;
+    color:white;
+    font-size:1.2rem;
+}
+
+.cpp{
+    width:75%;
+}
+
+.python{
+    width:75%;
+}
+
+.dsa{
+    width:80%;
+}
+
+.progress{
+    height:100%;
+    background:#00ffcc;
+    border-radius:10px;
+    position:relative;
+    animation:fill 2s ease forwards;
+}
+
+@keyframes fill{
+    from{
+        width:0;
+    }
+}
+
+/* links */
+.links{
+
+margin-top:2rem;
+
+display:flex;
+justify-content:center;
+gap:2rem;
+
+}
+
+.links a{
+
+color:white;
+font-size:3.5rem;
+
+transition:0.3s;
+}
+
+.links a:hover{
+
+color:#00ffd5;
+transform:scale(1.2);
+
+}
+
+ /* loader effect  */
+#loader{
+  position:fixed;
+  top:0;
+  left:0;
+
+  width:100%;
+  height:100vh;
+
+  background:#020617;
+  color:white;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  z-index:999;
+}
+
+/* spinner */
+
+#loader{
+position:fixed;
+top:0;
+left:0;
+
+width:100%;
+height:100vh;
+
+background:#020617;
+color:white;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+z-index:999;
+}
+
+/* typing */
+
+.typing{
+font-size:2.5rem;
+margin-bottom:25px;
+}
+
+/* dots loader */
+
+.dots{
+display:flex;
+gap:10px;
+}
+
+.dots div{
+
+width:12px;
+height:12px;
+
+background:#00ffd5;
+border-radius:50%;
+
+animation:bounce 0.6s infinite alternate;
+
+}
+
+.dots div:nth-child(2){
+animation-delay:0.2s;
+}
+
+.dots div:nth-child(3){
+animation-delay:0.4s;
+}
+
+@keyframes bounce{
+
+from{
+transform:translateY(0);
+}
+
+to{
+transform:translateY(-10px);
+}
+
+}
+
+/* main content */
+
+#main-content{
+display:none;
+}
